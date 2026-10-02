@@ -17,6 +17,24 @@ export interface Post {
 const data: Post[] = [
     {
         type: 'Article',
+        date: '2026-10-02',
+        headline: '稀奇古怪的中国经济',
+        description: '转自《新快报》翻译美国《国际先驱论坛报》的一篇文章，讨论中国经济的全球影响。',
+        link: '/blog/ce',
+        previewImage: '/preview/3-notebook_UBA90tPOp.jpg',
+        shareImage: '/preview/3-notebook_UBA90tPOp.jpg',
+    },
+    {
+        type: 'Article',
+        date: '2026-10-02',
+        headline: '战马',
+        description: '崔伟立原唱《战马》完整版，歌曲旋律优美。',
+        link: '/blog/fh',
+        previewImage: '/preview/2-react_du62Xdg5s.jpg',
+        shareImage: '/preview/2-react_du62Xdg5s.jpg',
+    },
+    {
+        type: 'Article',
         date: '2023-11-10',
         headline: 'A Guide To Self-Hosting Web Apps On Ubuntu Servers',
         description:

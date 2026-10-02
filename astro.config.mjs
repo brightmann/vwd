@@ -1,12 +1,13 @@
 import { defineConfig } from 'astro/config'
 import react from '@astrojs/react'
 import tailwindcss from '@tailwindcss/vite'
+import cloudflare from '@astrojs/cloudflare'
 
 // https://astro.build/config
-// Fully static site (no on-demand routes) — served by server.mjs, which adds the
-// security headers. React islands are rendered at build time + hydrated client-side.
+// Fully static site (no on-demand routes). React islands are rendered at build
+// time + hydrated client-side. Deployed to Cloudflare Workers.
 export default defineConfig({
-    site: 'https://wweb.dev',
+    site: 'https://vwd.luckypoem.workers.dev',
     // Match Next's default (no trailing slash). `format: 'directory'` emits
     // <route>/index.html so route output merges with same-named public/ asset dirs
     // (e.g. /blog route + /blog/*.png images).
@@ -14,6 +15,7 @@ export default defineConfig({
     build: {
         format: 'directory',
     },
+    adapter: cloudflare(),
     integrations: [react()],
     vite: {
         plugins: [tailwindcss()],
