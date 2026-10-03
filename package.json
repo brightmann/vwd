@@ -4,7 +4,6 @@
   "private": true,
   "license": "MIT",
   "type": "module",
-  "packageManager": "yarn@4.17.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
